@@ -1,0 +1,157 @@
+/* Estilos Exclusivos de la Página "Nosotros" */
+
+:root {
+    --color-jungle: #1e3a2a;
+    --color-alert: #e74c3c;
+    --color-tech-neon: #3498db;
+}
+
+/* 1. EFECTOS DE FONDO Y DINOSAURIOS */
+.jungle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--color-jungle), #000);
+    z-index: -2;
+}
+
+.dino-track {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.dinosaur {
+    position: absolute;
+    bottom: -150px;
+    height: 150px;
+    z-index: 10;
+    animation: walk-cross 30s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+#trex {
+    left: -200px;
+    height: 250px; /* Más grande para el T-Rex */
+    animation: walk-cross 30s linear infinite;
+}
+#raptor {
+    left: -150px;
+    animation: walk-cross 20s linear infinite 5s; /* Más rápido y con delay */
+}
+#ptero {
+    top: 10%;
+    left: -100px;
+    height: 80px;
+    animation: fly-cross 25s linear infinite;
+}
+
+@keyframes walk-cross {
+    0% { transform: translateX(0) scaleX(1); }
+    50% { transform: translateX(calc(100vw + 300px)) scaleX(1); } /* Cruza la pantalla */
+    51% { transform: translateX(calc(100vw + 300px)) scaleX(-1); } /* Gira */
+    100% { transform: translateX(0) scaleX(-1); } /* Regresa */
+}
+@keyframes fly-cross {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100vw + 100px)); }
+}
+
+/* 2. EFECTO DE VIBRACIÓN (Sustituye al viejo temblor) */
+.vibration-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+.vibration-active {
+    animation: screen-shake 0.1s infinite;
+}
+@keyframes screen-shake {
+    0% { transform: translate(1px, 1px); }
+    25% { transform: translate(-1px, -1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, 1px); }
+    100% { transform: translate(1px, 1px); }
+}
+
+
+/* 3. ESTILO DE CONTENIDO */
+
+.content-wrapper {
+    position: relative;
+    z-index: 10; /* Asegura que el contenido esté por encima del fondo y los dinos */
+    color: #333;
+    padding-bottom: 5rem;
+}
+
+#mainTitle {
+    font-family: 'Orbitron', sans-serif;
+    color: #34495e;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.tagline {
+    font-family: 'Tinos', serif;
+    font-style: italic;
+    color: var(--color-alert);
+}
+
+/* ESTILOS DE DINO-FACTS (NUEVA SECCIÓN) */
+.fact-bg {
+    background-color: #2c3e50; /* Azul oscuro */
+}
+.fact-box {
+    color: white;
+    padding: 20px;
+}
+.fact-box i {
+    color: var(--color-alert);
+}
+.fact-box .count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    display: inline-block;
+}
+.fact-box .suffix {
+    font-size: 1.5em;
+    color: var(--color-alert);
+}
+
+/* ESTILOS DE CARDS (SERVICIOS E INSTALACIONES) */
+.service-card-ns {
+    border-top: 5px solid var(--color-tech-neon);
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card-ns:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--color-alert);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.installation-card-ns {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+.installation-card-ns .card-header {
+    background-color: #ecf0f1;
+    color: #34495e;
+    font-weight: bold;
+}
+.installation-card-ns .card-header i {
+    color: #27ae60;
+    margin-right: 5px;
+}

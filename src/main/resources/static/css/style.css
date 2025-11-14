@@ -1,0 +1,168 @@
+/* Variables para el Tema Jurásico/Dino */
+:root {
+    --dino-green: #4CAF50; /* Un verde vibrante, como vegetación profunda */
+    --dino-dark: #212529; /* Negro oscuro, usado para el fondo del nav/footer */
+    --dino-light-bg: #F5F5DC; /* Fondo beige claro, como arena/tierra */
+    --dino-hover: #388E3C; /* Verde oscuro para hover */
+    --dino-secondary: #795548; /* Marrón tierra, para contraste */
+    --dino-tertiary: #5D4037; /* Marrón más oscuro para el footer */
+    --dino-heading-color: #3e2723; /* Marrón oscuro para títulos */
+}
+
+/* Estilos Globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dino-light-bg);
+    padding-top: 70px; /* Espacio para el navbar fijo */
+}
+
+/* Títulos y Encabezados */
+.dino-heading {
+    color: var(--dino-heading-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--dino-green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Navbar Personalizado (Aplica el estilo oscuro y verde) */
+#main-navbar {
+    background-color: var(--dino-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dino-brand {
+    color: var(--dino-green) !important;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#main-navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#main-navbar .nav-link:hover, 
+#main-navbar .nav-link.active {
+    color: var(--dino-green) !important;
+    border-bottom: 2px solid var(--dino-green);
+    padding-bottom: 5px;
+}
+
+/* Hero Section (Fondo con imagen de la selva) */
+.hero-section {
+    /* Puedes cambiar la URL por una imagen local de tu proyecto: url('../images/jungle-bg.jpg') */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1920/800?random=1&nature,jungle');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+    color: white;
+}
+
+.hero-title {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Botón Temático */
+.btn-dino {
+    background-color: var(--dino-green);
+    border: 2px solid var(--dino-green);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-dino:hover {
+    background-color: var(--dino-hover);
+    border-color: var(--dino-hover);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Feature Items */
+.feature-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--dino-green);
+}
+
+/* Data Section (Estilo de ladrillo o tierra) */
+.data-section {
+    background-color: var(--dino-secondary); /* Marrón Tierra */
+    color: white;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--dino-dark); 
+    background-color: white; 
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testimonials */
+.testimonial-section {
+    background-color: var(--dino-light-bg);
+}
+
+.testimonial-card {
+    background-color: white;
+    border-left: 5px solid var(--dino-green);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+/* Footer (Estilo de cueva o piedra) */
+.footer {
+    background-color: var(--dino-tertiary); /* Marrón muy oscuro */
+    color: #f8f9fa;
+    font-size: 0.95rem;
+}
+
+.footer-title {
+    border-bottom: 2px solid var(--dino-green);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--dino-green);
+}

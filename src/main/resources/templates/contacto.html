@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | DinoZoo Park</title>
+    
+    <!-- Enlaces Estándar de Bootstrap y Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- CSS Estándar y de la Página Específica -->
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/contacto.css"> <!-- ARCHIVO CSS SEPARADO -->
+
+    <!-- Fuentes Personalizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Tinos:wght@700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- RASTRO DE DINOSAURIO (Elemento JS) -->
+    <div id="dinoTrail"></div> 
+
+    <!-- NAV BAR - Estructura Estándar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand dino-brand" href="/">
+                <i class="fa-solid fa-tooth"></i> 🦖 DinoZoo Park
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+                    
+                    <!-- BOTÓN DE INICIO DE SESIÓN -->
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="/login" class="btn btn-sm btn-dino">
+                            <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN NAV BAR -->
+
+    <main class="content-wrapper pt-5 bg-light-dino">
+        <div class="container py-5 mt-5">
+
+            <header class="text-center mb-5">
+                <h1 class="display-4 fw-bold mb-3 dino-heading-main">CONTACTO - CENTRO DE EVACUACIÓN</h1>
+                <p class="lead text-secondary">Si tienes preguntas sobre nuestros proyectos genéticos, alianzas de seguridad o una simple reserva, comunícate con el Centro de Control.</p>
+            </header>
+            
+            <div class="row g-5">
+                
+                <!-- Columna de Información de Contacto -->
+                <div class="col-lg-5">
+                    <div class="info-card p-4 rounded-3 shadow-sm h-100">
+                        <h2 class="h4 mb-4 text-primary-dino"><i class="fas fa-info-circle me-2"></i> Información Clave</h2>
+                        
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-phone-volume me-2 text-danger-dino"></i> **Línea de Emergencia (Ventas):**</p>
+                            <p class="lead fw-bold text-danger-dino">+506 5555-DINO</p>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-envelope me-2 text-success-dino"></i> **Email (Ingeniería Genética):**</p>
+                            <p class="lead fw-bold text-success-dino">security@innovacionevolucionada.com</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-warning-dino"></i> **Ubicación (Restringida):**</p>
+                            <p class="fw-bold">Isla Nublar, Coordenadas [CENSURADO]</p>
+                        </div>
+                        
+                        <hr>
+
+                        <h2 class="h5 mt-4 text-secondary">¿Visitas de Emergencia?</h2>
+                        <p class="small text-muted">Todas las visitas requieren acreditación Nivel 5 de InGen. No garantizamos que el vehículo no sea volteado por un T-Rex.</p>
+
+                    </div>
+                </div>
+
+                <!-- Columna del Formulario de Contacto -->
+                <div class="col-lg-7">
+                    <section class="contact-form p-4 rounded-3 shadow-lg">
+                        <h2 class="h4 text-center mb-4 text-primary-dino"><i class="fas fa-file-alt me-2"></i> Reporte o Solicitud</h2>
+
+                        <form action="/enviar" method="POST">
+                            
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Tu Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Dr. Alan Grant">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Tu Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" name="email" required placeholder="paleontologo@mail.com">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="dinosaurio-favorito" class="form-label">¿Cuál es tu dinosaurio favorito?</label>
+                                <select class="form-select" id="dinosaurio-favorito" name="dinosaurio-favorito">
+                                    <option value="Tyrannosaurus">Tyrannosaurus Rex</option>
+                                    <option value="Triceratops">Triceratops</option>
+                                    <option value="Velociraptor">Velociraptor (Unidad Alpha)</option>
+                                    <option value="Brachiosaurus">Brachiosaurus</option>
+                                    <option value="Stegosaurus">Stegosaurus</option>
+                                    <option value="Indominus">Indominus Rex (¡Error Genético!)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="mensaje" class="form-label">Tu Mensaje (Detalla la brecha de seguridad o pregunta):</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required placeholder="Necesito hablar sobre la escasez de ranas en el ADN..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-lg w-100 btn-dino-submit">
+                                <i class="fas fa-paper-plane me-2"></i> Enviar Reporte de Incidente
+                            </button>
+                            
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <!-- SECCIÓN DEL MAPA (Simulado) -->
+            <section id="map-location" class="mt-5 pt-4">
+                <h2 class="dino-heading-map text-center mb-4"><i class="fas fa-map-marked-alt me-2"></i> Localización (Vigilada)</h2>
+                <div class="map-container rounded-3 shadow-lg">
+                    <!-- Mapa Genérico para simular ubicación de Isla Nublar -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157643.08500244792!2d-84.50201993478443!3d10.160161476901804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa3601267812e17%3A0xc3f8e580e660e181!2sIsla%20Tortuga!5e0!3m2!1ses-419!2scr!4v1700000000000!5m2!1ses-419!2scr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p class="text-center mt-3 text-muted small fst-italic">Advertencia: El acceso al centro de operaciones está restringido. Cualquier acercamiento no autorizado será considerado un ataque de Velociraptor.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER - Estructura Estándar -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column mb-4 mb-md-0">
+                    <h4 class="footer-title">Contacto</h4>
+                    <p>📍 Av. Jurásica, Sector 404</p>
+                    <p>📞 +1 (555) DinoZoo</p>
+                    <p>📧 <a href="mailto:info@dinozooppark.com">info@dinozooppark.com</a></p>
+                </div>
+                <div class="col-md-4 footer-column mb-4 mb-md-0">
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/galeria">Galería de Especies</a></li>
+                        <li><a href="/servicios">Horarios y Precios</a></li>
+                        <li><a href="/nosotros">Nuestra Historia</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <h4 class="footer-title">Redes Sociales</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-3 mt-4 border-top border-secondary">
+                <p class="quote">"La vida se abre camino. Nosotros, simplemente la dirigimos."</p>
+                &copy; 2025 DinoZoo Park. Un proyecto de InGen. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous">
+    </script>
+    <script src="js/contacto.js"></script> <!-- ARCHIVO JS SEPARADO -->
+</body>
+</html>

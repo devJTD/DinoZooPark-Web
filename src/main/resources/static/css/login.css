@@ -1,0 +1,185 @@
+/* Estilos Exclusivos de la Página de Login (Centro de Control) */
+
+:root {
+    --color-primary: #1abc9c; /* Turquesa/Neón (Acento Principal) */
+    --color-secondary: #f39c12; /* Naranja (Acento Secundario/Peligro) */
+    --color-dark-bg: #2c3e50; /* Azul Oscuro (Fondo de Tarjeta) */
+    --color-text-light: #ecf0f1; /* Gris Claro (Texto) */
+    --color-error: #e74c3c; /* Rojo (Error) */
+    --shadow-neon: 0 0 10px rgba(26, 188, 156, 0.5); /* Sombra Neón */
+}
+
+/* 1. ESTILOS BASE Y FONDO */
+body {
+    font-family: 'Orbitron', sans-serif, Arial;
+    background-color: #0d1a26; /* Fondo casi negro */
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Oculta el overflow del fondo dinámico */
+}
+
+/* Simulación de Fondo de Datos/Selva (Innovación) */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><defs><pattern id="g" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="0.5" fill="%232c3e50" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="%230d1a26"/><rect width="100" height="100" fill="url(%23g)"/></svg>');
+    background-blend-mode: overlay;
+    opacity: 0.8;
+    animation: flowData 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes flowData {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* 2. CONTENEDOR Y TARJETAS */
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-shadow: var(--shadow-neon);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.tagline {
+    color: var(--color-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem !important;
+}
+
+.form-card {
+    background: var(--color-dark-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), var(--shadow-neon);
+    border: 1px solid rgba(26, 188, 156, 0.3);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.form-title {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(26, 188, 156, 0.5);
+    padding-bottom: 10px;
+}
+
+/* Manejo de visibilidad con JS */
+.hidden {
+    position: absolute; /* Para que la transición de posición se aplique */
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none; /* Desactiva clics */
+    z-index: -1;
+}
+
+.active {
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+/* 3. INPUTS Y BOTONES */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.input-icon-wrapper {
+    position: relative;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Espacio para el icono */
+    border: 1px solid var(--color-primary);
+    background-color: #1e2a38;
+    color: var(--color-text-light);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 8px var(--color-secondary);
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+.btn-dino-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-dark-bg);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-dino-login:hover {
+    background-color: #16a085;
+    color: white;
+    box-shadow: var(--shadow-neon);
+}
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.switch-text a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.switch-text a:hover {
+    color: #e67e22; /* Tono más oscuro de naranja */
+}

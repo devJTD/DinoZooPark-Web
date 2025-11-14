@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | DinoZoo Park</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos específicos para la sección Hero de Servicios (simula un banner) */
+        .services-hero {
+            /* Deberías reemplazar esto con una imagen relevante para tu parque */
+            background-color: #34495e; 
+            background-size: cover;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 56px; /* Compensación para el navbar fijo */
+        }
+        .services-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Estilos de mejora visual para las tarjetas de servicio */
+        .service-icon {
+            font-size: 4em;
+            color: #27ae60; /* Verde temático */
+            transition: color 0.3s;
+        }
+        .servicio-card {
+            border-bottom: 5px solid #27ae60; /* Borde de color en la base */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s;
+        }
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border-color: #e74c3c; /* Borde cambia a rojo en hover */
+        }
+        .servicio-card:hover .service-icon {
+            color: #e74c3c; /* Ícono cambia a rojo en hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand dino-brand" href="/">
+                <i class="fa-solid fa-tooth"></i> 🦖 DinoZoo Park
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+                    
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="/login" class="btn btn-sm btn-dino">
+                            <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="services-hero">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Soluciones Jurásicas para un Mundo Moderno</h1>
+                <p class="lead">Liderando el mercado de consultoría, logística y cuidado de fauna prehistórica con la calidad de DinoZoo Park.</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="container my-5 py-4">
+            <h2 class="text-center dino-heading mb-5">Nuestros Servicios de Vanguardia</h2>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100 shadow servicio-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-tree service-icon"></i>
+                            <h3 class="card-title mt-3">Consultoría de Hábitat Dino</h3>
+                            <p class="card-text">Diseñamos y optimizamos entornos perfectos para la aclimatación y prosperidad de sus nuevos dinosaurios. Desde la flora adecuada hasta el control climático y la seguridad perimetral.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow servicio-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-truck-moving service-icon"></i>
+                            <h3 class="card-title mt-3">Transporte Ultra-Seguro</h3>
+                            <p class="card-text">Contamos con la flota más avanzada para el transporte de especímenes vivos de cualquier tamaño, garantizando su llegada en óptimas condiciones a cualquier parte del globo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow servicio-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-paw service-icon"></i>
+                            <h3 class="card-title mt-3">Entrenamiento de Manejo</h3>
+                            <p class="card-text">Nuestro equipo de expertos ofrece cursos intensivos para el manejo, alimentación y cuidado básico de sus dinosaurios. ¡Conviértase en un cuidador certificado!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow servicio-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-notes-medical service-icon"></i>
+                            <h3 class="card-title mt-3">Asistencia Veterinaria Dino</h3>
+                            <p class="card-text">Servicio de atención médica especializada disponible 24/7. Nuestros paleoveterinarios están listos para atender cualquier emergencia o necesidad de salud de sus especímenes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow servicio-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-shield-alt service-icon"></i>
+                            <h3 class="card-title mt-3">Seguro para Especies</h3>
+                            <p class="card-text">Ofrecemos pólizas de seguro personalizadas para proteger su inversión ante cualquier eventualidad, desde enfermedades inesperadas hasta escapes y daños a la propiedad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow servicio-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-dna service-icon"></i>
+                            <h3 class="card-title mt-3">Clonación y Reproducción</h3>
+                            <p class="card-text">Laboratorio de bioingeniería avanzada para la reproducción asistida y, bajo estricto control ético, la clonación de especies extintas para su colección privada.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column mb-4 mb-md-0">
+                    <h4 class="footer-title">Contacto</h4>
+                    <p>📍 Av. Jurásica, Sector 404</p>
+                    <p>📞 +1 (555) DinoZoo</p>
+                    <p>📧 <a href="mailto:info@dinozooppark.com">info@dinozooppark.com</a></p>
+                </div>
+                <div class="col-md-4 footer-column mb-4 mb-md-0">
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/galeria">Galería de Especies</a></li>
+                        <li><a href="/servicios">Horarios y Precios</a></li>
+                        <li><a href="/nosotros">Nuestra Historia</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <h4 class="footer-title">Redes Sociales</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-3 mt-4 border-top border-secondary">
+                &copy; 2025 DinoZoo Park. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous">
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

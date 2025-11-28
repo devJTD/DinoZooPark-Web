@@ -1,0 +1,12 @@
+# .dockerignore
+# Archivos de configuración de Git y de entorno
+.git
+.gitignore
+.env
+
+# Archivos de caché y editor (si usas Node.js, incluirías node_modules)
+.vscode
+.DS_Store
+
+# Archivos de documentación, etc. que no son servidos por Nginx
+README.md
